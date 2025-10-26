@@ -480,8 +480,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👥 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/R7X-doodles)
-- LinkedIn: [@yourprofile](https://www.linkedin.com/in/rashika-rajesh-kannan-56a168310/)
+- GitRequird: [R7X-doodles](https://github.com/R7X-doodles)
+- LinkedIn: [rashika-rajesh-kannan](https://www.linkedin.com/in/rashika-rajesh-kannan-56a168310/)
 - Email: rashikarajesh2007@gmail.com
 
 ## 🙏 Acknowledgments
@@ -531,4 +531,5 @@ If you find this project helpful, please consider giving it a ⭐!
 
 
 </div>
+
 
