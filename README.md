@@ -505,9 +505,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For questions or support:
 
-- **Create an Issue**: [GitHub Issues](https://github.com/yourusername/student-mental-health-analysis/issues)
-- **Email**: your.email@example.com
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/student-mental-health-analysis/discussions)
+- **Create an Issue**: [GitHub Issues](https://github.com/R7X-doodles/student-mental-health-analysis/issues)
+- **Email**: rashikarajesh2007@gmail.com
+- **Discussions**: [GitHub Discussions](https://github.com/R7X-doodles/student-mental-health-analysis/discussions)
 
 ## 🌟 Star History
 
@@ -515,9 +515,9 @@ If you find this project helpful, please consider giving it a ⭐!
 
 ## 📊 Project Status
 
-![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/student-mental-health-analysis)
-![GitHub issues](https://img.shields.io/github/issues/yourusername/student-mental-health-analysis)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/yourusername/student-mental-health-analysis)
+![GitHub last commit](https://img.shields.io/github/last-commit/R7X-doodles/student-mental-health-analysis)
+![GitHub issues](https://img.shields.io/github/issues/R7X-doodles/student-mental-health-analysis)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/R7X-doodles/student-mental-health-analysis)
 
 ---
 
@@ -525,8 +525,9 @@ If you find this project helpful, please consider giving it a ⭐!
 
 **Made with ❤️ for improving student mental health**
 
-[Report Bug](https://github.com/yourusername/student-mental-health-analysis/issues) · 
-[Request Feature](https://github.com/yourusername/student-mental-health-analysis/issues) · 
+[Report Bug](https://github.com/R7X-doodles/student-mental-health-analysis/issues) · 
+[Request Feature](https://github.com/R7X-doodles/student-mental-health-analysis/issues) · 
 [Documentation](docs/)
+
 
 </div>
