@@ -422,7 +422,7 @@ def clean_and_validate(df):
     
     return df
 
-def save_combined_dataset(df, output_filename='combined_mental_health_data.csv'):
+def save_combined_dataset(df, output_filename='../data/processed/combined_mental_health_data.csv'):
     """
     Save the combined dataset
     """

@@ -305,7 +305,7 @@ def exploratory_data_analysis(df):
     plt.ylabel('Count')
     
     plt.tight_layout()
-    plt.savefig('01_exploratory_data_analysis.png', dpi=DPI, bbox_inches='tight')
+    plt.savefig('../outputs/visualizations/01_exploratory_data_analysis.png', dpi=DPI, bbox_inches='tight')
     print("✓ Saved: 01_exploratory_data_analysis.png")
     plt.close()
 
@@ -347,7 +347,7 @@ def correlation_analysis(df):
     plt.title('Main Composite Scores Correlation', fontweight='bold', fontsize=14)
     
     plt.tight_layout()
-    plt.savefig('02_correlation_analysis.png', dpi=DPI, bbox_inches='tight')
+    plt.savefig('../outputs/visualizations/02_correlation_analysis.png', dpi=DPI, bbox_inches='tight')
     print("✓ Saved: 02_correlation_analysis.png")
     plt.close()
     
@@ -454,7 +454,7 @@ def advanced_visualizations(df):
     plt.grid(True, alpha=0.3, axis='y')
     
     plt.tight_layout()
-    plt.savefig('03_advanced_visualizations.png', dpi=DPI, bbox_inches='tight')
+    plt.savefig('../outputs/visualizations/03_advanced_visualizations.png', dpi=DPI, bbox_inches='tight')
     print("✓ Saved: 03_advanced_visualizations.png")
     plt.close()
 
@@ -598,7 +598,7 @@ def key_findings_summary(df):
     plt.grid(True, alpha=0.3, axis='y')
     
     plt.tight_layout()
-    plt.savefig('04_key_findings_summary.png', dpi=DPI, bbox_inches='tight')
+    plt.savefig('../outputs/visualizations/04_key_findings_summary.png', dpi=DPI, bbox_inches='tight')
     print("✓ Saved: 04_key_findings_summary.png")
     plt.close()
 
@@ -606,7 +606,7 @@ def save_processed_data(df):
     """
     Save processed dataset
     """
-    output_file = 'processed_mental_health_data.csv'
+    output_file = '../data/processed/processed_mental_health_data.csv'
     df.to_csv(output_file, index=False)
     print(f"\n✓ Saved processed data: {output_file}")
     print(f"  Shape: {df.shape}")
@@ -652,7 +652,7 @@ def main():
     print("="*70)
     
     # Load data - Change filepath to your CSV file or leave None for sample data
-    df = load_data('combined_mental_health_data.csv')
+    df = load_data('../data/processed/combined_mental_health_data.csv')
     
     # Clean the data
     df = clean_data(df)
