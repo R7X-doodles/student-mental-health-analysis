@@ -241,16 +241,25 @@ student-mental-health-analysis/
 ├── 📄 .gitignore                        # Git ignore rules
 │
 ├── 📂 data/
+│   ├── 📄 README.md                     # Data dictionary & descriptions
 │   ├── 📂 raw/                          # Original datasets
 │   │   └── student_mental_health.csv    # Primary dataset (500 records)
 │   └── 📂 processed/                    # Cleaned & processed data
-│       ├── cleaned_combined_data.csv
+│       ├── cleaned_data.csv
+│       └── feature_engineered.csv
 │
+├── 📂 notebooks/                         # Jupyter notebooks for analysis
+│   ├── 01_data_cleaning.ipynb           # Data preprocessing & cleaning
+│   ├── 02_exploratory_analysis.ipynb    # EDA with visualizations
+│   ├── 03_statistical_analysis.ipynb    # Hypothesis testing & correlations
+│   └── 04_visualizations.ipynb          # Generate publication-ready plots
 │
 ├── 📂 src/                               # Source code modules
 │   ├── __init__.py
 │   ├── mental_health_analyzer.py        # Main analysis class
 │   ├── data_processing.py               # Data cleaning utilities
+│   ├── statistical_analysis.py          # Statistical test functions
+│   └── visualization.py                 # Plotting functions
 │
 ├── 📂 outputs/                           # Generated outputs
 │   ├── 📂 figures/                      # All visualizations (PNG, PDF)
@@ -260,13 +269,25 @@ student-mental-health-analysis/
 │   │   ├── 04_key_findings_summary.png
 │   │   └── service_utilization_gap.png
 │   └── 📂 reports/                      # Analysis reports
+│       ├── analysis_report.txt
+│       ├── statistical_summary.pdf
 │       └── final_report.pdf
 │
 ├── 📂 dashboard/                         # Interactive Streamlit dashboard
 │   ├── app.py                           # Main dashboard application
+│   ├── config.py                        # Configuration settings
+│   └── utils.py                         # Helper functions
 │
 ├── 📂 docs/                              # Documentation
-    ├── project_summary.md               # Complete summary
+│   ├── project_report.pdf               # Complete 32-page report
+│   ├── presentation.pptx                # Project presentation
+│   ├── methodology.md                   # Detailed methodology
+│   └── data_dictionary.md               # Variable descriptions
+│
+└── 📂 tests/                             # Unit tests
+    ├── test_data_processing.py
+    ├── test_statistical_analysis.py
+    └── test_visualization.py
 ```
 
 ---
@@ -839,59 +860,133 @@ graph TD
 
 ---
 
-## 📸 Screenshots & Visualizations
+## 📸 Visualizations & Results Preview
 
-### Dashboard Preview
+<div align="center">
 
-**Main Dashboard Interface**
+### 🎨 Key Visualizations
+
+*Click on any image to view full resolution*
+
+</div>
+
+### 1️⃣ Exploratory Data Analysis
+
+<div align="center">
+
+[![EDA Visualization](outputs/figures/01_exploratory_data_analysis.png)](outputs/figures/01_exploratory_data_analysis.png)
+
+**Comprehensive overview of mental health distributions, demographic breakdowns, and summary statistics**
+
+</div>
+
+---
+
+### 2️⃣ Correlation Analysis
+
+<div align="center">
+
+[![Correlation Heatmap](outputs/figures/02_correlation_analysis.png)](outputs/figures/02_correlation_analysis.png)
+
+**Statistical relationships between all mental health factors with significance markers (*, **, ***)**
+
+</div>
+
+**Key Correlations Identified:**
+- 🔴 **Strong Positive:** Workload Stress (r=+0.58), Academic Pressure (r=+0.55)
+- 🟢 **Strong Protective:** Peer Support (r=-0.51), Social Networks (r=-0.48)
+
+---
+
+### 3️⃣ Advanced Statistical Visualizations
+
+<div align="center">
+
+[![Advanced Analysis](outputs/figures/03_advanced_visualizations.png)](outputs/figures/03_advanced_visualizations.png)
+
+**Box plots, violin plots, scatter analysis, and distribution comparisons across demographics**
+
+</div>
+
+---
+
+### 4️⃣ Key Findings Summary
+
+<div align="center">
+
+[![Key Findings](outputs/figures/04_key_findings_summary.png)](outputs/figures/04_key_findings_summary.png)
+
+**Executive summary dashboard with critical metrics and insights**
+
+</div>
+
+**Critical Findings Highlighted:**
+- ⚠️ 35% of students in high-risk category
+- 📊 70% service utilization gap
+- 📚 Academic stress as primary risk factor
+
+---
+
+### 5️⃣ Service Utilization Gap Analysis
+
+<div align="center">
+
+[![Service Gap](outputs/figures/service_utilization_gap.png)](outputs/figures/service_utilization_gap.png)
+
+**Visualization of the gap between mental health needs and service usage**
+
+</div>
+
+---
+
+### 📊 Dashboard Interface Preview
+
+**Interactive Streamlit Dashboard Features:**
+
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  🧠 Student Mental Health Analysis Dashboard                │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  📊 Key Metrics                                             │
-│  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐      │
-│  │High Risk │ │Service   │ │Awareness │ │Avg Score │      │
-│  │   35%    │ │Gap: 70%  │ │   60%    │ │  3.2/5   │      │
-│  └──────────┘ └──────────┘ └──────────┘ └──────────┘      │
-│                                                              │
-│  📈 Interactive Visualizations                              │
-│  [Correlation Heatmap] [Trend Analysis] [Comparisons]      │
-│                                                              │
-│  🎯 Filter Options                                          │
-│  Gender: [All ▼] Year: [All ▼] Department: [All ▼]        │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────────┐
+│  🧠 Student Mental Health Analysis Dashboard                   │
+├────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  📊 Real-Time Key Metrics                                      │
+│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌──────────┐│
+│  │ High Risk   │ │ Service Gap │ │ Awareness   │ │Avg Score ││
+│  │    35%      │ │    70%      │ │    60%      │ │  3.2/5   ││
+│  │  175/500    │ │ Only 30%    │ │ 300/500     │ │  ⚠️      ││
+│  └─────────────┘ └─────────────┘ └─────────────┘ └──────────┘│
+│                                                                 │
+│  📈 Interactive Visualizations                                 │
+│  ├─ Correlation Explorer (hover for details)                   │
+│  ├─ Demographic Breakdowns (filterable)                        │
+│  ├─ Trend Analysis (time-series)                               │
+│  └─ Factor Impact Analysis (sortable)                          │
+│                                                                 │
+│  🎯 Dynamic Filters                                            │
+│  Gender: [All ▼] Year: [All ▼] Dept: [All ▼] CGPA: [All ▼]  │
+│                                                                 │
+│  📥 Export Options                                             │
+│  [📊 Download Chart] [📄 Generate Report] [💾 Export Data]    │
+│                                                                 │
+└────────────────────────────────────────────────────────────────┘
 ```
 
-### Sample Visualizations
+**Try it yourself:** `streamlit run dashboard/app.py`
 
-The project includes these publication-ready visualizations:
+---
 
-1. **Mental Health Distribution**
-   - Histogram with KDE curves
-   - Box plots by demographic groups
-   - Violin plots for detailed distribution
+### 📁 All Visualizations Available
 
-2. **Correlation Heatmap**
-   - Complete correlation matrix
-   - Color-coded by strength
-   - Significance markers (*, **, ***)
+Browse the complete collection in the [`outputs/visulizations/`](outputs/visualizations/) directory:
 
-3. **Factor Analysis**
-   - Scatter plots with regression lines
-   - Residual plots
-   - Q-Q plots for normality
+| Visualization | Description | Format |
+|---------------|-------------|--------|
+| `01_exploratory_data_analysis.png` | Complete EDA with distributions | PNG, 300 DPI |
+| `02_correlation_analysis.png` | Full correlation matrix with p-values | PNG, 300 DPI |
+| `03_advanced_visualizations.png` | Statistical plots and comparisons | PNG, 300 DPI |
+| `04_key_findings_summary.png` | Executive summary infographic | PNG, 300 DPI |
+| `service_utilization_gap.png` | Service gap analysis | PNG, 300 DPI |
 
-4. **Comparative Analysis**
-   - Gender-based comparisons
-   - Year-wise trends
-   - Department breakdowns
-
-5. **Service Gap Visualization**
-   - Current vs. needed capacity
-   - Barrier identification
-   - Utilization funnel
+**Publication Ready:** All figures are high-resolution (300 DPI) and suitable for academic papers, presentations, and reports.
 
 ---
 
@@ -1030,16 +1125,7 @@ python -m pytest tests/test_statistical_analysis.py
 
 # Run with coverage report
 python -m pytest --cov=src tests/
-```
-
-### Test Coverage
-
-| Module | Coverage | Status |
-|--------|----------|--------|
-| `data_processing.py` | 95% | ✅ |
-| `statistical_analysis.py` | 92% | ✅ |
-| `visualization.py` | 88% | ✅ |
-| `mental_health_analyzer.py` | 90% | ✅ |
+ |
 
 ---
 
@@ -1228,7 +1314,6 @@ A: We recommend semester-based surveys (2-3 times per year) for trend monitoring
 
 ### Response Time
 
-- Critical bugs: 24-48 hours
 - Feature requests: 1-2 weeks
 - General questions: 3-5 days
 
