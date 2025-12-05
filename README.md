@@ -413,7 +413,7 @@ student-mental-health-analysis/
 
 ### Available Visualizations
 
-All visualizations are publication-ready and available in `outputs/figures/`[outputs/visualization]:
+All visualizations are publication-ready and available in `outputs/figures/`[outputs/visualizations]:
 
 1. **📊 Exploratory Data Analysis** (`01_exploratory_data_analysis.png`)
    - Distribution plots for all mental health indicators
