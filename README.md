@@ -241,25 +241,16 @@ student-mental-health-analysis/
 ├── 📄 .gitignore                        # Git ignore rules
 │
 ├── 📂 data/
-│   ├── 📄 README.md                     # Data dictionary & descriptions
 │   ├── 📂 raw/                          # Original datasets
 │   │   └── student_mental_health.csv    # Primary dataset (500 records)
 │   └── 📂 processed/                    # Cleaned & processed data
-│       ├── cleaned_data.csv
-│       └── feature_engineered.csv
+│       ├── cleaned_combined_data.csv
 │
-├── 📂 notebooks/                         # Jupyter notebooks for analysis
-│   ├── 01_data_cleaning.ipynb           # Data preprocessing & cleaning
-│   ├── 02_exploratory_analysis.ipynb    # EDA with visualizations
-│   ├── 03_statistical_analysis.ipynb    # Hypothesis testing & correlations
-│   └── 04_visualizations.ipynb          # Generate publication-ready plots
 │
 ├── 📂 src/                               # Source code modules
 │   ├── __init__.py
 │   ├── mental_health_analyzer.py        # Main analysis class
 │   ├── data_processing.py               # Data cleaning utilities
-│   ├── statistical_analysis.py          # Statistical test functions
-│   └── visualization.py                 # Plotting functions
 │
 ├── 📂 outputs/                           # Generated outputs
 │   ├── 📂 figures/                      # All visualizations (PNG, PDF)
@@ -269,25 +260,13 @@ student-mental-health-analysis/
 │   │   ├── 04_key_findings_summary.png
 │   │   └── service_utilization_gap.png
 │   └── 📂 reports/                      # Analysis reports
-│       ├── analysis_report.txt
-│       ├── statistical_summary.pdf
 │       └── final_report.pdf
 │
 ├── 📂 dashboard/                         # Interactive Streamlit dashboard
 │   ├── app.py                           # Main dashboard application
-│   ├── config.py                        # Configuration settings
-│   └── utils.py                         # Helper functions
 │
 ├── 📂 docs/                              # Documentation
-│   ├── project_report.pdf               # Complete 32-page report
-│   ├── presentation.pptx                # Project presentation
-│   ├── methodology.md                   # Detailed methodology
-│   └── data_dictionary.md               # Variable descriptions
-│
-└── 📂 tests/                             # Unit tests
-    ├── test_data_processing.py
-    ├── test_statistical_analysis.py
-    └── test_visualization.py
+    ├── project_summary.md               # Complete summary
 ```
 
 ---
